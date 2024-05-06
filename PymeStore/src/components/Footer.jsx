@@ -1,4 +1,5 @@
 import React from "react";
+import '../styles/Footer.css'
 import { Link } from "react-router-dom";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaSquareFacebook } from "react-icons/fa6";
@@ -9,45 +10,42 @@ import { FaSquareYoutube } from "react-icons/fa6";
 const Footer = () => {
 
   return (
-    <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded mt-10 max-md:px-0">
-      <nav className="grid grid-flow-col max-sm:grid-flow-row gap-4">
-        <Link to="/" className="link link-hover text-2xl max-md:text-xl text-accent-content" onClick={() => window.scrollTo(0, 0)}>
+    <footer>
+      <nav className="nav-links">
+        <Link to="/" className="links" onClick={() => window.scrollTo(0, 0)}>
           Home
         </Link>
-        <Link to="/shop" className="link link-hover text-2xl max-md:text-xl text-accent-content" onClick={() => window.scrollTo(0, 0)}>
-          Shop
+        <Link to="/about" className="links" onClick={() => window.scrollTo(0, 0)}>
+          Sobre nosotros
         </Link>
-        <Link to="/about" className="link link-hover text-2xl max-md:text-xl text-accent-content" onClick={() => window.scrollTo(0, 0)}>
-          About us
-        </Link>
-        <Link to="/contact" className="link link-hover text-2xl max-md:text-xl text-accent-content" onClick={() => window.scrollTo(0, 0)}>
-          Contact
+        <Link to="/about" className="links" onClick={() => window.scrollTo(0, 0)}>
+          Terminos y condiciones
         </Link>
         <Link
             to="/login"
-            className="link link-hover text-2xl max-md:text-xl text-accent-content"
+            className="links"
             onClick={() => window.scrollTo(0, 0)}
         >
-            Login
+            Inicia sesión
         </Link>
         <Link
             to="/register"
-            className="link link-hover text-2xl max-md:text-xl text-accent-content"
+            className="links"
             onClick={() => window.scrollTo(0, 0)}
         >
-            Register
+            Registrate
         </Link>
       </nav>
       <nav>
-        <div className="grid grid-flow-col gap-4">
-          <FaSquareXTwitter className="text-6xl max-sm:text-4xl text-accent-content" />
-          <FaSquareFacebook className="text-6xl max-sm:text-4xl text-accent-content" />
-          <FaSquareInstagram className="text-6xl max-sm:text-4xl text-accent-content" />
-          <FaSquareYoutube className="text-6xl max-sm:text-4xl text-accent-content" />
+        <div className="div-logos">
+          <FaSquareXTwitter  className="logos" />
+          <FaSquareFacebook  className="logos" />
+          <FaSquareInstagram  className="logos" />
+          <FaSquareYoutube  className="logos" />
         </div>
       </nav>
       <aside>
-        <p className="text-2xl max-sm:text-sm text-accent-content">
+        <p>
           Copyright © 2023 - All right reserved by PymeStore
         </p>
       </aside>
