@@ -1,14 +1,15 @@
 footer {
     display: flex;
-    justify-content: center;
     flex-direction: column; 
+    justify-content: center;
     background-color: rgb(17, 16, 16);
     box-sizing: border-box;
-    bottom: 0px;
     color: aliceblue;
     width: 100%;
     padding: 40px 60px 20px;
-    margin: 0;
+    margin: 0 auto;
+    bottom:0;
+    left:0;
 }
 
 .nav-links {
@@ -31,12 +32,19 @@ footer {
 .div-logos {
     display:flex;
     justify-content: center;
+    margin:10px;
 }
 
 .logos {
     font-size: 3rem;
 }
+aside {
+    margin: 20px 0 10px;
+}
 
+p{
+    text-align: center;
+}
 @media (max-width: 768px) {
     footer {
         padding:10px;
@@ -60,7 +68,5 @@ footer {
         margin:5px;
     }
 
-    p{
-        text-align: center;
-    }
+
   }

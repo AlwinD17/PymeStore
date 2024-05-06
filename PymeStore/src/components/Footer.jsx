@@ -19,7 +19,7 @@ const Footer = () => {
           Sobre nosotros
         </Link>
         <Link to="/about" className="links" onClick={() => window.scrollTo(0, 0)}>
-          Terminos y condiciones
+          Términos y condiciones
         </Link>
         <Link
             to="/login"
@@ -33,7 +33,7 @@ const Footer = () => {
             className="links"
             onClick={() => window.scrollTo(0, 0)}
         >
-            Registrate
+            Regístrate
         </Link>
       </nav>
       <nav>
@@ -46,7 +46,7 @@ const Footer = () => {
       </nav>
       <aside>
         <p>
-          Copyright © 2023 - All right reserved by PymeStore
+          Copyright © 2024 - All right reserved by PymeStore
         </p>
       </aside>
     </footer>

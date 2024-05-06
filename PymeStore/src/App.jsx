@@ -4,24 +4,27 @@ import { HomeLayout, Login, Landing, Register } from './pages'
 
 const router = createBrowserRouter([
   {
-    path:"/",
-    element:<HomeLayout />,
+    
+    element: <HomeLayout />,
     children: [
       {
-        index: true,
+        name: 'landing',
+        path: '/',
         element: <Landing />,
       },
       {
-        path:"login",
-        element:<Login />, 
+        name: 'login',
+        path: '/login',
+        element: <Login />,
       },
       {
-        path: "register",
+        name: 'register',
+        path: '/register',
         element: <Register />,
       },
-    ]
-  }
-])
+    ],
+  },
+]);
 
 function App() {
 
