@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Login = () =>{
+const Landing = () =>{
     return(
     <>
     <p>hola</p>
     </>)
 }
 
-export default Login
+export default Landing

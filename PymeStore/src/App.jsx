@@ -1,7 +1,6 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
+import { HomeLayout, Login, Landing } from './pages'
 
 const router = createBrowserRouter([
   {
@@ -10,11 +9,11 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Landign />,
+        element: <Landing />,
       },
       {
         path:"login",
-        element:<login />, 
+        element:<Login />, 
       }
     ]
   }
@@ -25,7 +24,6 @@ function App() {
   return (
     <>
       <RouterProvider router={router} />
-      <ToastContainer position="top-center" />
     </>
   )
 }
