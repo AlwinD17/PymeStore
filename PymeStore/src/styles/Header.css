@@ -13,11 +13,13 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    background-color: rgb(255, 255, 255);
+    height: 80px;
+    background-color:#DEDEDE;
     color: rgb(0, 0, 0);
-    position: static;
-    padding: 5px 30px;
+    position: fixed;
+    padding: 5px;
     box-sizing: border-box;
+    transition: background-color 0.8s ease, color 0.8s ease;
 }
 .scrolled-header .title{
     align-self: center;
