@@ -21,7 +21,7 @@ const Login = () => {
     // Aquí puedes realizar acciones con los datos del formulario, como enviarlos a un servidor
     console.log(formData);
 
-    navigate('/gestor');
+    navigate('/productos');
   };
 
   return (

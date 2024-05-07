@@ -1,12 +1,10 @@
 import { createBrowserRouter,  RouterProvider } from 'react-router-dom'
 import './App.css'
 import { 
-  HomeLayout,
    Login, 
    Landing, 
    Register, 
    Additional, 
-   Gestor, 
    Productos, 
    Contacto, 
    Pedidos, 
@@ -15,6 +13,7 @@ import {
    Pagos, 
    Profile 
   } from './pages'
+import { HomeLayout, MainLayout } from './layout';
 
 
 const routes = createBrowserRouter([
@@ -54,33 +53,35 @@ const routes = createBrowserRouter([
     ]
   },
   {
-    path: '/gestor',
-    element: <Gestor />,
-  },
-  {
-    path:'/productos',
-    element:<Productos />
-  },
-  {
-    path:'/pedidos',
-    element:<Pedidos />
-  },
-  {
-    path:'/clientes',
-    element:<Clientes />
-  },
-  {
-    path:'/envios',
-    element:<Envios />
-  },
-  {
-    path:'/Pagos',
-    element:<Pagos />
-  },
-  {
-    path:'/profile',
-    element:<Profile />
+    element: <MainLayout />,
+    children: [
+      {
+        path:'/productos',
+        element:<Productos />
+      },
+      {
+        path:'/pedidos',
+        element:<Pedidos />
+      },
+      {
+        path:'/clientes',
+        element:<Clientes />
+      },
+      {
+        path:'/envios',
+        element:<Envios />
+      },
+      {
+        path:'/Pagos',
+        element:<Pagos />
+      },
+      {
+        path:'/profile',
+        element:<Profile />
+      }
+    ]
   }
+  
 ]);
 
 function App() {

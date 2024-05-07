@@ -43,16 +43,7 @@ const Productos = () =>{
       console.log(products)
       return(
             <>
-                <div className='flex'>
-                <Sidebar sidebarToggle={sidebarToggle} />
-                <div className='flex flex-col w-full'>
-                    <Dashboard
-                    sidebarToggle={sidebarToggle}
-                    setSidebarToggle={setSidebarToggle}
-                    />
-                </div>
-                </div>
-                
+            <h1>Hola</h1>
             </>
       )
 }

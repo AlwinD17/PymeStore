@@ -24,10 +24,10 @@ const Navbar = ({sidebarToggle,setSidebarToggle}) => {
                     <div className='z-10 hidden absolute bg-white rounded-lg shadow w-32 group-focus:block top-full right-0'>
                         <ul className='py-2 text-sm text-gray-950'>
                             <li>
-                                <Link to="/gestor">Profile</Link>
+                                <Link to="">Profile</Link>
                             </li>
                             <li>
-                                <Link to="/gestor">Setting</Link>
+                                <Link to="">Setting</Link>
                             </li>
                             <li>
                                 <Link to="/">Log out</Link>

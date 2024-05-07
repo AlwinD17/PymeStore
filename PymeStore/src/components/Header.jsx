@@ -33,7 +33,7 @@ const Header = () => {
                         <NavLink className="link" to="/">
                             Home
                         </NavLink>
-                        <NavLink className="link" to="/gestor">
+                        <NavLink className="link" to="/productos">
                             Mi Tienda
                         </NavLink>
                         <NavLink className="link" to="/about_us">
