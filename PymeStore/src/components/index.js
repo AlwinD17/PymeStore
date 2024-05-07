@@ -1,5 +1,5 @@
 export { default as Footer } from "./Footer"
 export { default as Header } from "./Header"
-export { default as Sidebar } from "./Sidebar"
-export { default as Dashboard } from "./Dashboard"
 export { default as Navbar } from "./Navbar"
+export { default as AccordionDash } from "./AccordionDash"
+export { default as Sidenav } from "./Sidenav"

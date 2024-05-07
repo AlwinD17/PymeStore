@@ -1,29 +1,24 @@
-import { useState } from 'react'
-import { Sidebar, Navbar } from '../components'
 import { Outlet } from 'react-router-dom'
-
+import Sidenav from '../components/Sidenav'
+import { Navbar } from '../components';
+import Box from '@mui/material/Box';
+import "../Dash.css";
 const MainLayout = () => {
-  const [sidebarToggle, setSidebarToggle] = useState(false)
+  
   return (
-    <div style={{
-        
-    }}>
-      <Sidebar sidebarToggle={sidebarToggle} />
-      <div style={{ 
-        // width:'100%'
-        }}>
-      <Navbar 
-        sidebarToggle = {sidebarToggle}
-        setSidebarToggle={setSidebarToggle}/>
-        <div style={{
-            // width:'100%',
-            marginLeft:'256px',
-            minHeight:'calc(100vh-57.33px)'
-        }}>
+    <>
+      <div className='bgcolor'>
+        <Navbar />
+        <Box height={70} />
+        <Box sx={{ display: 'flex' }}>
+          <Sidenav />
+          <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
             <Outlet />
-        </div>
+          </Box>
+        </Box>
       </div>
-    </div>
+      
+    </>
   )
 }
 
