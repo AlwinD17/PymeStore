@@ -2,7 +2,17 @@ import React from 'react'
 
 const Contacto = () =>{
     return(
-        <h1>Contacto</h1>
+        <>
+            <div>
+                <h1>Contacta con nosotros</h1>
+            </div>
+            <div>
+
+            </div>
+            <div>
+                
+            </div>
+        </>
     )
 }
 

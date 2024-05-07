@@ -11,7 +11,8 @@ import {
    Clientes, 
    Envios, 
    Pagos, 
-   Profile 
+   Profile,
+   Crear 
   } from './pages'
 import { HomeLayout, MainLayout } from './layout';
 
@@ -49,6 +50,11 @@ const routes = createBrowserRouter([
         name: 'Contacto',
         path: '/contacto',
         element: <Contacto />,
+      },
+      {
+        name: 'Crear',
+        path: '/crear',
+        element: <Crear />,
       }
     ]
   },

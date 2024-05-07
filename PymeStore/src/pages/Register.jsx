@@ -18,9 +18,8 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aquí puedes realizar acciones con los datos del formulario, como enviarlos a un servidor
     console.log(formData);
-    navigate('/');
+    navigate('/crear');
   };
 
   return (
