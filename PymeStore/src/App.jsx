@@ -1,12 +1,26 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter,  RouterProvider } from 'react-router-dom'
 import './App.css'
-import { HomeLayout, Login, Landing, Register, Additional, Gestor } from './pages'
+import { 
+  HomeLayout,
+   Login, 
+   Landing, 
+   Register, 
+   Additional, 
+   Gestor, 
+   Productos, 
+   Contacto, 
+   Pedidos, 
+   Clientes, 
+   Envios, 
+   Pagos, 
+   Profile 
+  } from './pages'
 
-const router = createBrowserRouter([
+
+const routes = createBrowserRouter([
   {
-    
     element: <HomeLayout />,
-    children: [
+    children:[
       {
         name: 'landing',
         path: '/',
@@ -31,13 +45,41 @@ const router = createBrowserRouter([
         name: 'Términos y Condiciones',
         path: '/terminos_condiciones',
         element: <Additional title=  {{name:'Términos y condiciones'}} />,
+      },
+      {
+        name: 'Contacto',
+        path: '/contacto',
+        element: <Contacto />,
       }
-    ],
+    ]
   },
   {
-    name: 'gestor',
     path: '/gestor',
     element: <Gestor />,
+  },
+  {
+    path:'/productos',
+    element:<Productos />
+  },
+  {
+    path:'/pedidos',
+    element:<Pedidos />
+  },
+  {
+    path:'/clientes',
+    element:<Clientes />
+  },
+  {
+    path:'/envios',
+    element:<Envios />
+  },
+  {
+    path:'/Pagos',
+    element:<Pagos />
+  },
+  {
+    path:'/profile',
+    element:<Profile />
   }
 ]);
 
@@ -45,7 +87,7 @@ function App() {
 
   return (
     <>
-      <RouterProvider router={router} />
+      <RouterProvider router={routes} />
     </>
   )
 }

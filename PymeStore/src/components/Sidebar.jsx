@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaHome, FaShoppingBag, FaClipboardList, FaUsers, FaTruck, FaMoneyBill } from 'react-icons/fa';
+import { Link } from 'react-router-dom'
 
 const Sidebar = ({sidebarToggle}) => {
   return (
@@ -10,40 +11,40 @@ const Sidebar = ({sidebarToggle}) => {
         <hr />
         <ul className='mt-3 text-white font-bold'>
             <li className='mb-2 rounded hover:shadow hover:bg-blue-500 py-2'>
-                <a href="" className='px-3'>
+                <Link to="/" className='px-3'>
                     <FaHome className='inline-block w-6 h-6 mr-2 -mt-2'></FaHome>
                     Home
-                </a>
+                </Link>
             </li>
             <li className='mb-2 rounded hover:shadow hover:bg-blue-500 py-2'>
-                <a href="" className='px-3'>
+                <Link to="/productos" className='px-3'>
                     <FaShoppingBag className='inline-block w-6 h-6 mr-2 -mt-2'></FaShoppingBag>
                     Productos
-                </a>
+                </Link>
             </li>
             <li className='mb-2 rounded hover:shadow hover:bg-blue-500 py-2'>
-                <a href="" className='px-3'>
+                <Link to="pedidos" className='px-3'>
                     <FaClipboardList className='inline-block w-6 h-6 mr-2 -mt-2'></FaClipboardList>
                     Pedidos
-                </a>
+                </Link>
             </li>
             <li className='mb-2 rounded hover:shadow hover:bg-blue-500 py-2'>
-                <a href="" className='px-3'>
+                <Link to="/clientes" className='px-3'>
                     <FaUsers className='inline-block w-6 h-6 mr-2 -mt-2'></FaUsers>
                     Clientes
-                </a>
+                </Link>
             </li>
             <li className='mb-2 rounded hover:shadow hover:bg-blue-500 py-2'>
-                <a href="" className='px-3'>
+                <Link to="/envios" className='px-3'>
                     <FaTruck className='inline-block w-6 h-6 mr-2 -mt-2'></FaTruck>
                     Envíos
-                </a>
+                </Link>
             </li>
             <li className='mb-2 rounded hover:shadow hover:bg-blue-500 py-2'>
-                <a href="" className='px-3'>
+                <Link to="/pagos" className='px-3'>
                     <FaMoneyBill className='inline-block w-6 h-6 mr-2 -mt-2'></FaMoneyBill>
                     Pagos
-                </a>
+                </Link>
             </li>
         </ul>
     </div>

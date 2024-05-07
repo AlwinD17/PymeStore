@@ -6,10 +6,13 @@ const Gestor = () => {
   const [sidebarToggle, setSidebarToggle] = useState(false)
   return (
     <div className='flex'>
-        <Sidebar sidebarToggle = {sidebarToggle}/>
-        <Dashboard 
-        sidebarToggle = {sidebarToggle}
-        setSidebarToggle={setSidebarToggle}/>
+      <Sidebar sidebarToggle={sidebarToggle} />
+      <div className='flex flex-col w-full'>
+        <Dashboard
+          sidebarToggle={sidebarToggle}
+          setSidebarToggle={setSidebarToggle}
+        />
+      </div>
     </div>
   )
 }
