@@ -54,7 +54,7 @@ export default function PedidosList() {
   });
 
   return (
-    <Paper sx={{ width: '100%', overflow: 'hidden', margin: '20px' }}>
+    <Paper sx={{ width: '100%', overflow: 'hidden', padding: '12px' }}>
       <Typography
         gutterBottom
         variant='h5'
