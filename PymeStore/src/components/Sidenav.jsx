@@ -14,6 +14,10 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import BarChartIcon from '@mui/icons-material/BarChart';
+import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
+import AssignmentIcon from '@mui/icons-material/Assignment';
 import { useNavigate } from 'react-router-dom';
 import { useAppStore } from '../appStore';
 
@@ -105,7 +109,7 @@ export default function Sidenav() {
                   justifyContent: 'center',
                 }}
               >
-                <InboxIcon />
+                <ShoppingCartIcon />
               </ListItemIcon>
               <ListItemText primary="Productos" sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton>
@@ -125,7 +129,7 @@ export default function Sidenav() {
                   justifyContent: 'center',
                 }}
               >
-                <InboxIcon />
+                <BarChartIcon />
               </ListItemIcon>
               <ListItemText primary="Estadistica" sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton>
@@ -145,12 +149,12 @@ export default function Sidenav() {
                   justifyContent: 'center',
                 }}
               >
-                <InboxIcon />
+                <PeopleAltIcon />
               </ListItemIcon>
               <ListItemText primary="Clientes" sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton>
           </ListItem>
-          <ListItem  disablePadding sx={{ display: 'block' }} onClick={()=>{navigate("/settings")}}>
+          <ListItem  disablePadding sx={{ display: 'block' }} onClick={()=>{navigate("/pedidos")}}>
             <ListItemButton
               sx={{
                 minHeight: 48,
@@ -165,9 +169,9 @@ export default function Sidenav() {
                   justifyContent: 'center',
                 }}
               >
-                <InboxIcon />
+                <AssignmentIcon />
               </ListItemIcon>
-              <ListItemText primary="Settings" sx={{ opacity: open ? 1 : 0 }} />
+              <ListItemText primary="Pedidos" sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton>
           </ListItem>          
         </List>

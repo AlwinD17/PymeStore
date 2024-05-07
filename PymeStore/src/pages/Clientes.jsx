@@ -1,8 +1,9 @@
 import React from 'react'
+import ClientList from '../components/ClientList'
 
 const Clientes = () =>{
     return(
-        <h1>Clientes</h1>
+        <ClientList />
     )
 }
 

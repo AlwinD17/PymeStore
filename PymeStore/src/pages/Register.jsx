@@ -90,6 +90,12 @@ const Register = () => {
             </button>
           </div>
         </form>
+        <p className="mt-10 text-center text-sm text-gray-500">
+            Ya se encuentra registrado?{' '}
+            <Link to="/login" className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">
+              Inicie Sesión
+            </Link>
+          </p>
       </div>
     </div>
   );

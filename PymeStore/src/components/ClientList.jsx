@@ -14,7 +14,7 @@ import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import Modal from '@mui/material/Modal';
-import AddProduct from './AddProduct';
+import AddClient from './AddClient';
 
 const style = {
     position: 'absolute',
@@ -30,24 +30,23 @@ const style = {
 
 const columns = [
   { id: 'name', label: 'Nombre', minWidth: 170 },
-  { id: 'price', label: 'Precio', minWidth: 100 },
-  { id: 'category', label: 'Categoría', minWidth: 170 },
-  { id: 'quantity', label: 'Cantidad', minWidth: 170 },
-  { id: 'createdAt', label: 'Fecha de Creación', minWidth: 170 },
+  { id: 'email', label: 'Correo Electrónico', minWidth: 170 },
+  { id: 'phone', label: 'Teléfono', minWidth: 170 },
+  { id: 'createdAt', label: 'Fecha de Registro', minWidth: 170 },
   { id: 'action', label: 'Acción', minWidth: 170 }
 ];
 
-function createData(name, price, category, quantity, createdAt) {
-  return { name, price, category, quantity, createdAt };
+function createData(name, email, phone, createdAt) {
+  return { name, email, phone, createdAt };
 }
 
 const initialRows = [
-  createData('Table Lamp', 500, 'Electronics', 8, new Date()),
-  createData('Laptop', 90000, 'Laptop', 10, new Date()),
+  createData('Cliente 1', 'cliente1@example.com', '123456789', new Date()),
+  createData('Cliente 2', 'cliente2@example.com', '987654321', new Date()),
   // Agrega más filas aquí
 ];
 
-export default function ProductList() {
+export default function ClientList() {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
   const [rows, setRows] = React.useState(initialRows);
@@ -86,7 +85,7 @@ export default function ProductList() {
                 aria-describedby="modal-modal-description"
             >
                 <Box sx={style}>
-                    <AddProduct closeEvent={handleClose}/>
+                    <AddClient closeEvent={handleClose}/>
                 </Box>
             </Modal>
         </div>
@@ -97,7 +96,7 @@ export default function ProductList() {
                 component="div"
                 sx={{ padding:"20px" }}
             >
-                Lista de productos
+                Lista de clientes
             </Typography>
             <Divider />
             <Box height={10}/>
@@ -107,7 +106,7 @@ export default function ProductList() {
                     id="combo-box-demo"
                     options={initialRows.map(row => row.name)}
                     sx={{ width: 300 }}
-                    renderInput={(params) => <TextField {...params} label="Buscar Producto" />}
+                    renderInput={(params) => <TextField {...params} label="Buscar Cliente" />}
                     onInputChange={handleSearch}
                 />
                 <Typography

@@ -1,8 +1,8 @@
 import React from 'react'
-
+import PedidosList from '../components/PedidosList'
 const Pedidos = () =>{
     return(
-        <h1>Pedidos</h1>
+        <PedidosList />
     )
 }
 
