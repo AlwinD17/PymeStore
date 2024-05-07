@@ -3,8 +3,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import ButtonGroup from '@mui/material/ButtonGroup';
-import { HexColorPicker } from "react-colorful";
+import { TextFielList, ColorPickerButtons, ImageSelector } from '../components';
 
 const Crear = () =>{
 
@@ -49,11 +48,20 @@ const Crear = () =>{
                 padding:'3% 23%',
             }}>
                 <form  onSubmit={handleSubmit} >
-                    <div>
+                    <div style={{
+                        display:'flex',
+                        flexDirection:'column',
+                        gap:'10px',
+                        marginBottom:'30px'
+                    }}>
                         <h2 style={{
-
+                            textAlign:'left',
+                            fontFamily:'sans-serif',
+                            fontSize:'16px',
+                            fontWeight:'bold',
+                            
                         }}>
-                            Escoje un nombre para tu tienda
+                            1. Escoje un nombre para tu tienda
                         </h2>
                         <TextField
                             required
@@ -61,18 +69,88 @@ const Crear = () =>{
                             label="Nombre de la tienda"
                             htmlFor='nombre'
                         />
+                        <TextField
+                            required
+                            id="outlined"
+                            label="Logo de la tienda"
+                            htmlFor='nombre'
+                        />
+                    </div>
+                    <div style={{
+                        marginBottom:'30px'
+                    }}>
+                        <h2 style={{
+                            textAlign:'left',
+                            fontFamily:'sans-serif',
+                            fontSize:'16px',
+                            fontWeight:'bold',
+                            marginBottom:'10px'
+                        }}>2. Escoje una plantilla</h2>
+                        <ImageSelector />
+                    </div>
+                    <div style={{
+                        marginBottom:'30px'
+                    }}>
+                        <h2 style={{
+                            textAlign:'left',
+                            fontFamily:'sans-serif',
+                            fontSize:'16px',
+                            fontWeight:'bold',
+                            marginBottom:'10px'
+                        }}>3. Escoje los colores</h2>
+                        <ColorPickerButtons />
+                        
+                    </div>
+                    <div style={{
+                        display:'flex',
+                        flexDirection:'column',
+                        gap:'10px',
+                        marginBottom:'30px'
+                    }}>
+                        <h2 style={{
+                            textAlign:'left',
+                            fontFamily:'sans-serif',
+                            fontSize:'16px',
+                            fontWeight:'bold',
+                        }}>4. Inserta tus imagenes</h2>
+                        <TextField
+                            required
+                            id="outlined"
+                            label="Url Imagen 1"
+                            htmlFor='urlImg1'
+                            larger
+                        />
+                        <TextField
+                            required
+                            id="outlined"
+                            label="Url Imagen 2"
+                            htmlFor='urlImg2'
+                            larger
+                        />
+                        <TextField
+                            required
+                            id="outlined"
+                            label="Url Imagen 3"
+                            htmlFor='urlImg3'
+                            larger
+                        />
+                    </div>
+                    <div style={{
+                        marginBottom:'30px'
+                    }}>
+                        <h2 style={{
+                            textAlign:'left',
+                            fontFamily:'sans-serif',
+                            fontSize:'16px',
+                            fontWeight:'bold',
+                            marginBottom:'10px'
+                        }}>5. Agrega categorias</h2>
+                        <TextFielList />
                     </div>
                     <div>
-                        <h2>Escoje una plantilla</h2>
-                    </div>
-                    <div>
-                        <h2>Escoje los colores</h2>
-                    </div>
-                    <div>
-                        <h2>Inserta tus imagenes</h2>
-                    </div>
-                    <div>
-                        <h2>Agrega categorias</h2>
+                        <Button variant="contained" color="success" type='submit'>
+                            Terminar
+                        </Button>
                     </div>
                 </form>
             </div>
