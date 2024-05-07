@@ -15,10 +15,10 @@ const Footer = () => {
         <Link to="/" className="links" onClick={() => window.scrollTo(0, 0)}>
           Home
         </Link>
-        <Link to="/about" className="links" onClick={() => window.scrollTo(0, 0)}>
+        <Link to="/about_us" className="links" onClick={() => window.scrollTo(0, 0)}>
           Sobre nosotros
         </Link>
-        <Link to="/about" className="links" onClick={() => window.scrollTo(0, 0)}>
+        <Link to="/terminos_condiciones" className="links" onClick={() => window.scrollTo(0, 0)}>
           Términos y condiciones
         </Link>
         <Link
