@@ -47,7 +47,7 @@ const Landing = () =>{
                     color:colorLetras,   
                     textAlign:'center',
                     fontFamily:'fantasy' 
-                }}>Personalizalo a tu gusto</h3>
+                }}>Personalízalo a tu gusto</h3>
                 <p style={{
                     color:colorLetras,
                     fontFamily:'sans-serif',
