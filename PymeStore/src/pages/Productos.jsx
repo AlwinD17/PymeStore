@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
+import ProductList from '../components/ProductList.jsx'
 import productosJSON from '../data/Productos.js'
-import { Sidebar, Dashboard } from '../components'
 
 const Productos = () =>{
     const [sidebarToggle, setSidebarToggle] = useState(false)
@@ -42,9 +42,7 @@ const Productos = () =>{
       ));
       console.log(products)
       return(
-            <>
-            <h1>Hola</h1>
-            </>
+        <ProductList />
       )
 }
 

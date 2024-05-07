@@ -1,5 +1,5 @@
 import { createBrowserRouter,  RouterProvider } from 'react-router-dom'
-import './App.css'
+
 import { 
    Login, 
    Landing, 
@@ -12,7 +12,9 @@ import {
    Envios, 
    Pagos, 
    Profile,
-   Crear 
+   Crear, 
+   Settings,
+   Estadisticas
   } from './pages'
 import { HomeLayout, MainLayout } from './layout';
 
@@ -66,6 +68,10 @@ const routes = createBrowserRouter([
         element:<Productos />
       },
       {
+        path:'/estadisticas',
+        element:<Estadisticas />
+      },
+      {
         path:'/pedidos',
         element:<Pedidos />
       },
@@ -84,6 +90,10 @@ const routes = createBrowserRouter([
       {
         path:'/profile',
         element:<Profile />
+      },
+      {
+        path:'/settings',
+        element:<Settings />
       }
     ]
   }
